@@ -9,6 +9,6 @@ RUN ./ApiRestPag_47749-main/gradlew bootJar --no-daemon
 
 FROM openjdk:17-alpine
 EXPOSE 9000
-COPY --from=build ./ApiRestPag_47749-main/build/libs/apiRestSinPaginacion-0.0.1-SNAPSHOT.jar ./app.jar
+COPY --from=build ./build/libs/apiRestSinPaginacion-0.0.1-SNAPSHOT.jar ./app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
