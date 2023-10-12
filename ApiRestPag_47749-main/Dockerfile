@@ -4,7 +4,7 @@ RUN apk update
 RUN apk add openjdk17
 
 COPY . .
-RUN chmod +x ./gradle
+RUN chmod +x ./ApiRestPag_47749-main/gradlew
 RUN ./gradlew bootJar --no-daemon
 
 FROM openjdk:17-alpine
